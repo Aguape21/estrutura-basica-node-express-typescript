@@ -106,3 +106,4 @@ exports.Client = Client;
 if (module && module.exports) {
     module.exports = Client;
 }
+//# sourceMappingURL=espocrm-api-client.js.map

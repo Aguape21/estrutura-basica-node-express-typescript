@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "description": "Ferramentas para uso no site da e-licencie",
   "main": "app/index.ts",
+  "scripts": {
+    "start": "nodemon app/index.ts",
+    "build": "tsc --project ./tsconfig.json"
+  },
   "dependencies": {
+    "@prisma/client": "^3.11.1",
     "express": "*",
     "ip": "*",
     "nodemon": "*"
@@ -11,12 +16,10 @@
   "devDependencies": {
     "@types/express": "*",
     "@types/ip": "*",
-    "ts-node": "*",
-    "typescript": "*"
-  },
-  "scripts": {
-    "start": "nodemon app/index.ts",
-    "build": "tsc --project ./tsconfig.json"
+    "@types/node": "^17.0.23",
+    "prisma": "^3.11.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
   "author": "Luiz Henrique Rosa da Silva",
   "license": "ISC"

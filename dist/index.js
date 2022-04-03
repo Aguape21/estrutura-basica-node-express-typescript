@@ -18,3 +18,4 @@ app.listen(port, () => {
     const enderecos = ["0.0.0.0", "localhost", ip_1.default.address()].map((endereco) => `http://${endereco}:${port}`);
     console.log(enderecos.join("\n"));
 });
+//# sourceMappingURL=index.js.map
