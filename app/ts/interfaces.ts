@@ -4,12 +4,12 @@ export interface tipoBuscaIndez {
 }
 
 export interface tipoRetornoErro {
-  tipo: "erro"
+  tipo: 500|400
   mensagem: string
 }
 
 export interface tipoRetornoSucesso {
-  tipo: "sucesso"
+  tipo: 200
   dados: any
 }
 

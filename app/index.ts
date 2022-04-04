@@ -4,12 +4,12 @@
 
 import express from "express"
 import ip from "ip"
-import { adicionarRotas } from "./rotas"
+import { adicionarRotas, listaRotas } from "./rotas"
 
 const app = express()
 const port = 3000
 
-app.get("/", (_req, res) => {
+app.get(listaRotas.INDEX, (_req, res) => {
   res.send("🌱")
 })
 

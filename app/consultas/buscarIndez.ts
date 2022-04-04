@@ -11,7 +11,7 @@ export const buscarIndez = async (
 
   if (!validar || !entrada) {
     return {
-      tipo: "erro",
+      tipo: 500,
       mensagem: "Entrada inválida",
     }
   }
@@ -23,12 +23,12 @@ export const buscarIndez = async (
   })
   if (consulta) {
     return {
-      tipo: "sucesso",
+      tipo: 200,
       dados: consulta[entrada.tipo],
     }
   } else {
     return {
-      tipo: "erro",
+      tipo: 400,
       mensagem: "Não encontrado",
     }
   }
