@@ -4,13 +4,16 @@
 
 import express from "express"
 import ip from "ip"
+import { adicionarRotas } from "./rotas"
 
 const app = express()
 const port = 3000
 
 app.get("/", (_req, res) => {
-  res.send("Olá mundo!")
+  res.send("🌱")
 })
+
+adicionarRotas(app)
 
 app.listen(port, () => {
   console.log("[⚡️] Aplicação nos endereços:")
