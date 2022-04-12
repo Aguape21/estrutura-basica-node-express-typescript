@@ -4,16 +4,24 @@
 
 import express from "express"
 import ip from "ip"
-import { adicionarRotas, listaRotas } from "./rotas"
+import bodyParser from "body-parser"
+import cors from "cors"
 
 const app = express()
 const port = 3000
 
-app.get(listaRotas.INDEX, (_req, res) => {
+//libera o acesso a todos os dominios
+app.use(cors())
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded())
+
+// parse application/json
+app.use(bodyParser.json())
+
+app.get("/", (_req, res) => {
   res.send("🌱")
 })
-
-adicionarRotas(app)
 
 app.listen(port, () => {
   console.log("[⚡️] Aplicação nos endereços:")
